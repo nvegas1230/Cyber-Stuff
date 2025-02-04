@@ -1,1 +1,9 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+    <test1>
+        testy test
+    </test1>
+    <test2>
+        <text>This is an example.</text>
+    </test2>
+</content>
