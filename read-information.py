@@ -20,9 +20,12 @@ def get_element_names(xml_file):
       # Iterate through each child element of the parent
       for child in root:
           # Add the name of the child element to the string
-          element_names += child.tag + ", "
+          element_names += child.tag + " "
 
   return element_names.strip() 
-  
+
+def get_element_given():
+  print("test")
 options = get_element_names("test.xml")
-print(options)
+print("options: " + options)
+respond = input("Input element to go to: ")
