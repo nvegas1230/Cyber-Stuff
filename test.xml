@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
     <sentence>Hello, world!</sentence>
+    <osinfo>
+        <os>Windows</os>
+        <version>10</version>
+    </osinfo>
 </root>
