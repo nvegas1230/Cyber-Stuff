@@ -1,31 +1,47 @@
 import xml.etree.ElementTree as xmlRead
 import tkinter as tk
-"""
-# Parse the XML file
-tree = xmlRead.parse("test.xml")
-root = tree.getroot()
 
-name = input("What information do you want to read? " )
-"""
-def get_element_names(xml_file):
-  # Parse the XML file
-  tree = xmlRead.parse(xml_file)
-  root = tree.getroot()
+main = xmlRead.parse("test.xml")
+root = main.getroot()
+currentPath = root
+running = True
 
-  # Initialize an empty string to hold the names of the child elements
+def get_element_names(path):
   element_names = ""
-
-  # Check if the parent element exists
-  if root is not None:
-      # Iterate through each child element of the parent
-      for child in root:
-          # Add the name of the child element to the string
-          element_names += child.tag + " "
-
+  
+  if path is not None:
+    for child in path:
+      element_names += child.tag + ", "
+  element_names+="up"
   return element_names.strip() 
+def elementPath(tag):
+  if tag is not None:
+    newPath = currentPath.find(tag)
+    if newPath is not None:
+      return newPath
+    else:
+      return "failed"
+def getText(path):
+  if path.text is None:
+    return "failed"
+  else:
+    return path.text
+def action():
+  print("Your current path is: "+currentPath)
+  print("Actions: exit, text, path")
+  action = input("Input action: ")
 
-def get_element_given():
-  print("test")
-options = get_element_names("test.xml")
-print("options: " + options)
-respond = input("Input element to go to: ")
+  if action == "exit":
+    running = False
+
+  if action == "path":
+    options = get_element_names(currentPath)
+    print("options: " + options)
+    tag = input("Input element to go to: ")
+    if tag is None:
+      return
+    elif tag is not None:
+      check = elementPath(tag)
+      print("Path")
+while running:
+  action()
