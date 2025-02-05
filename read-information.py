@@ -27,12 +27,12 @@ def getText(path):
   else:
     return path.text
 def action():
-  print("Your current path is: "+currentPath)
+  print("Your current path is: ")
   print("Actions: exit, text, path")
   action = input("Input action: ")
-
+  
   if action == "exit":
-    running = False
+    return action
 
   if action == "path":
     options = get_element_names(currentPath)
@@ -44,4 +44,6 @@ def action():
       check = elementPath(tag)
       print("Path")
 while running:
-  action()
+  result = action()
+  if result == "exit":
+    running = False
