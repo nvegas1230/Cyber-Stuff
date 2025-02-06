@@ -25,18 +25,33 @@ def getElementNames(path):
   if path is not None:
     for child in path:
       element_names += child.tag + ", "
-  element_names+="up"
+  if path.tag != "root":
+    element_names+="up"
   print("Children of element: "+element_names.strip())
 def elementPath(tag):
+  global currentPath
   if tag == "up":
     return 
   if tag is not None:
     newPath = currentPath.find(tag)
-    return newPath
+    currentPath = newPath
+def listAction():
+  global currentPath
+  actionsList = "Actions: exit"
+  for element in currentPath:
+    if element is not None:
+      actionsList = actionsList + ", cd, ls"
+      break
+  if currentPath.text.strip() != "":
+    actionsList = actionsList + ", gettext"
+  print(actionsList)
 def action():
   global currentPath
+  global root
+  if currentPath is None:
+    currentPath = root
+    print("Path is invalid: reset to default")
   print("\nYour current path is: "+currentPath.tag)
-  print("Actions: exit, cd, ls, gettext")
   action = input("Input action: ").strip()
   print()
   if action == "exit":
@@ -48,10 +63,14 @@ def action():
     path = input("Input directory/element: ").strip()
     if path == "up":
       pathUp()
+    elif path.strip() == "":
+      return
     else:
-      currentPath = elementPath(path)
+       elementPath(path)
   elif action == "gettext":
     print(currentPath.text)
+  elif action == "help" or action == "":
+    listAction()
 while running:
   result = action()
   if result == "exit":
