@@ -1,10 +1,34 @@
 import xml.etree.ElementTree as xmlRead
-import tkinter as tk
+import os
 
-main = xmlRead.parse("test.xml")
+main = xmlRead.parse("notes_folder/main.xml")
 root = main.getroot()
 currentPath = root
+currentFile = main
 running = True
+
+def createXmlFile(path, text, filename):
+  if path is None:
+    root = xmlRead.Element(filename)
+
+    child = xmlRead.SubElement(root, "child")
+    child.text = text
+
+    tree = xmlRead.ElementTree(root)
+    tree.write(filename, encoding="utf-8", xml_declaration=True)
+    print(f"XML file '{filename}' created with the given text.")
+def addTextToXml(path, text):
+  try:
+    tree = xmlRead.parse(path)
+    root = tree.getroot()
+
+    new_child = xmlRead.SubElement(root, "child")
+    new_child.text = text
+
+    tree.write(path, encoding="utf-8", xml_declaration=True)
+    print(f"New text added to '{path}'.")
+  except Exception as e:
+    print(f"Error: {e}")
 def parentLoop(pathGiven):
   global currentPath
   check = None
@@ -31,8 +55,8 @@ def getElementNames(path):
 def elementPath(tag):
   global currentPath
   if tag == "up":
-    return 
-  if tag is not None:
+    pathUp()
+  elif tag is not None:
     newPath = currentPath.find(tag)
     currentPath = newPath
 def listAction():
@@ -54,7 +78,9 @@ def action():
   print("\nYour current path is: "+currentPath.tag)
   action = input("Input action: ").strip()
   print()
-  if action == "exit":
+  if action == "":
+    return
+  elif action == "exit":
     print("Exiting...")
     return action
   elif action == "ls":
@@ -69,8 +95,10 @@ def action():
        elementPath(path)
   elif action == "gettext":
     print(currentPath.text)
-  elif action == "help" or action == "":
+  elif action == "help":
     listAction()
+  else:
+    elementPath(action)
 while running:
   result = action()
   if result == "exit":

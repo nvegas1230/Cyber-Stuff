@@ -1,1 +1,1 @@
-python read-information.py
+python /home/runner/workspace/notes_folder/read-information.py
