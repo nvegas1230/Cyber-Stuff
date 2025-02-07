@@ -4,31 +4,45 @@ import os
 main = xmlRead.parse("notes_folder/main.xml")
 root = main.getroot()
 currentPath = root
-currentFile = main
+currentFile = "main.xml"
 running = True
 
-def createXmlFile(path, text, filename):
-  if path is None:
-    root = xmlRead.Element(filename)
-
-    child = xmlRead.SubElement(root, "child")
-    child.text = text
-
-    tree = xmlRead.ElementTree(root)
-    tree.write(filename, encoding="utf-8", xml_declaration=True)
-    print(f"XML file '{filename}' created with the given text.")
-def addTextToXml(path, text):
+def defineXmlFile(fileName):
+  global currentFile
+  root = xmlRead.Element(fileName)
+  fileName = fileName + ".xml"
+  currentFile = fileName
+  tree = xmlRead.ElementTree(root)
+  filePath = os.path.join("/home/runner/workspace/notes_folder", fileName)
+  tree.write(filePath, encoding="utf-8", xml_declaration=True)
+  print(f"XML file '{fileName}' created")
+def addTextToXml(text):
+  global currentFile
+  global currentPath
   try:
-    tree = xmlRead.parse(path)
-    root = tree.getroot()
-
-    new_child = xmlRead.SubElement(root, "child")
-    new_child.text = text
-
-    tree.write(path, encoding="utf-8", xml_declaration=True)
-    print(f"New text added to '{path}'.")
+    tree = xmlRead.parse("notes_folder/"+currentFile)
+    currentPath.text = text
+    filePath = os.path.join("/home/runner/workspace/notes_folder", currentFile)
+    tree.write(filePath, encoding="utf-8", xml_declaration=True)
+    print(f"New text added to '{currentFile}' in '{currentPath}'")
   except Exception as e:
     print(f"Error: {e}")
+def addSubElementToXml(elementName):
+  global currentFile
+  global currentPath
+  try:
+    tree = xmlRead.parse("notes_folder/"+currentFile)
+    xmlRead.SubElement(currentPath, elementName)
+    currentPath = elementName
+    filePath = os.path.join("/home/runner/workspace/notes_folder", currentFile)
+    tree.write(filePath, encoding="utf-8", xml_declaration=True)
+    print(f"New element '{elementName}' added to '{currentPath}' in '{currentFile}'")
+  except Exception as e:
+    print(f"Error: {e}")
+def createXmlFile(fileName, text):
+  defineXmlFile(fileName)
+  addSubElementToXml(text)
+  addTextToXml(text)
 def parentLoop(pathGiven):
   global currentPath
   check = None
@@ -56,9 +70,14 @@ def elementPath(tag):
   global currentPath
   if tag == "up":
     pathUp()
+  elif tag == "root":
+    currentPath = root
   elif tag is not None:
     newPath = currentPath.find(tag)
-    currentPath = newPath
+    if newPath is None:
+      print("Invalid path")
+    else:
+      currentPath = newPath
 def listAction():
   global currentPath
   actionsList = "Actions: exit"
@@ -72,9 +91,6 @@ def listAction():
 def action():
   global currentPath
   global root
-  if currentPath is None:
-    currentPath = root
-    print("Path is invalid: reset to default")
   print("\nYour current path is: "+currentPath.tag)
   action = input("Input action: ").strip()
   print()
@@ -97,6 +113,16 @@ def action():
     print(currentPath.text)
   elif action == "help":
     listAction()
+  elif action == "addfile":
+    textConfirm = True
+    while textConfirm:
+      fileName = input("Input file name: ").strip()
+      fileText = input("Input text: ").strip()
+      if fileName == "" or fileText == "":
+        print("One field is invalid, please try again\n")
+      else:
+        textConfirm = False
+    createXmlFile(fileName, fileText)
   else:
     elementPath(action)
 while running:
