@@ -79,9 +79,9 @@ Networking terms
 
 Permissions
 Octal Notation
--r-xrw-rw-
-d 	rwx    --x    r--
-    owner  group  other
+- r-xrw-rw-
+d	rwx	--x	r--
+	owner	group	other
 - at the start = file
 d at the start = directory
 ls -l = view permissions
@@ -98,7 +98,7 @@ ALL = o
 Chmod = Change file permissions
 chown username filename
 User types
-Root = almighty permissions to everything
+Root = permissions to everything
 regular users = created by root user
 system users = default users created by the system.
 
@@ -129,7 +129,8 @@ Keywords/Abbreviations
 IP adress = Internet Protocol
 GUI = Graphic User Interface
 DNS = Domain Name System
-OS (Operating System): manages all the software and hardware on the computer.
+OS = Operating System; manages all the software and hardware on the computer.
+API = Application Programming Interface
 
 Git
 Git init = make repository
@@ -164,9 +165,7 @@ Data and File Types
 Array = place to store variables.
 1=Integer=int
 2.3=Float
-XML file = Extensible Markup Language File- This type of file is readable by both humans and computers.
-
-Regex
+XML file = Extensible Markup Language File - This type of file is readable by both humans and computers.
 
 Security Data
 Need To Know
@@ -192,7 +191,7 @@ Privacy and Security
 2. Society/ies: Groups of people co-existing in a semi-organized community 
 3. Communities: A collection of people that work together towards a common goal
 4. Legislation: A set of laws that everyone is excpected to follow
-5. Law vs by-Law: Laws are enforced by the govournment and cover general broad rules, while by-laws are more focused onlocal matters
+5. Law vs by-Law: Laws are enforced by the government and cover general broad rules, while by-laws are more focused onlocal matters
 6. Legal and Illegal: Legal actions are what the government allows us to do, while Illegal actions are against the law
 7. Privacy: The sacrifice of safety for secrecy
 8. Information Security: The act of protecting peoples privacy and information
