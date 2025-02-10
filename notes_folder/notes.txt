@@ -1,1 +1,205 @@
+Grade 10 Cybersecurity
 
+
+INDEX
+Logic gates
+Basic Linux Commands
+Computer Parts
+Networking
+Permissions/User types
+Useful Commands
+Keywords/Abbreviations
+Git
+Bash
+Data Types
+Security Data
+Relationships
+
+
+LOGIC GATES\Boolean
+IS	NOT	AND	OR
+input	output
+0	false
+1	true
+
+A	B	AND	OR	XAND	NOR
+0	1	F	T	F	F
+1	0	F	T	F	F
+0	0	F	F	T	T
+1	1	T	T	T	F
+XAND (Exclusive AND) only if both are equal.
+NOR (Neither this nor that) only proves things that are false.
+
+
+Basic Linux Commands:
+
+henry@Henry:~$
+henry = user
+Henry = PC name
+~ = home/henry
+cd / = goes to root directory
+ls (-l)= list (permissions)
+cd = change directory
+cd- = go back
+pwd = prints current wording directory
+mkdir/rmdir = make/remove directory
+cat = view what’s in a file
+touch = creates empty documents
+nano file_name = allows you to edit a file
+mv = rename
+find path -name "name of file"= search for files
+Rm = remove stuff
+find /path/to/search -(name/size) "name or part of name" +100M
+
+Computer Parts
+Applications:
+OS (Operating System): manages all the software and hardware on the computer.
+File systems: A set of data structures, interfaces, abstractions, and APIs that work together to manage any type of file on any type of storage device, in a consistent manner.	
+Shell: The shell manages the interaction between you and the operating system by prompting you for input
+Kernal: Acts as a bridge between applications and data processing performed at hardware level using inter-process communication and system calls.
+Firmware: Stored instructions on hardware that tells the hardware how to function.
+Hardware: Physical components: Motherboard, CPU(Central Processing Unit), GPU(Graphics Processing Unit/Graphics Card), SSD(Solid State Drive), RAM(Random Access Memory), Case, Cooler, Power supply, Peripherals.
+
+
+Networking terms
+1. IP Address (Internet protocol): A UID/personal number that is used to identify devices that are connected to the internet "eg 192.168.1.3".
+2. Subnet mask: It hosts portions in an IP address for routing and identification. A subnet mask is a 32-bit number that divides an IP address into network and host IPs. portions. It helps devices determine whether another device is on the same local network or a different one. Displayed in 2 octets of 0s and 1s
+3. Gateway: It connects network devices, helping them communicate easier.
+4. DNS (Domain Name System): (only 13 DNS servers in the world) "eg 255.255.255.0".
+5. Network switch: It is a device that connects local networks allowing them to communicate.
+6. Network Router: A network router is a device that connects networks and directs data traffic.
+7. Access point: is allows wifi enabled devices to connect to a wired network.
+8. MAC address: Identifier assigned to a network interface for communication.
+9. Port: Allows multiple devices to use networks without interference.
+10. System monitoring =  tracking the performance/health of system or network
+11. System Security = Protocols in place to protect systems, networks, and more from breaches/threats.
+12. System = a bunch of processes that work together to make things work
+13. Process = the way things are done
+14. Types of networks (Wan, LAN, PAN MAN and VPN)
+
+Permissions
+Octal Notation
+-r-xrw-rw-
+d 	rwx    --x    r--
+    owner  group  other
+- at the start = file
+d at the start = directory
+ls -l = view permissions
+r = read = 4
+w = write = 2
+x = execute = 1
+types of people it affects
+User/owner = u
+Group = g
+ALL = o
++ to add user to file
+- to remove permissions
+= to set exact permissions
+Chmod = Change file permissions
+chown username filename
+User types
+Root = almighty permissions to everything
+regular users = created by root user
+system users = default users created by the system.
+
+Useful Commands
+1. Ifconfig (internet configuration) = It is used in Unix-like operating systems like Linux, to configure and display information about network interfaces on a system.
+2. ip (internet protocol) = it is the address of your device. You would use it to view information about network interfaces, like their name, states, and hardware addresses. It also replaced the ifconfig and route command.
+3. host = used to find the ip address of a specific domain name or find the domain name of an IP address.
+4. tracepath = traces network paths and is similar to traceroute.
+5. ss = used to display socket statistics. It replaced netstat.
+6. dig = retrieves information about various DNS.
+7. iwconfig = It configures wireless network interfaces on linux systems.
+8. hostname = It shows the name of the device you’re using.
+9. ping = it shows how well your computer is working.
+10. ifplugstatus = You need to download ifplugd to use the command. The command checks the link status of a network interface.
+11. tcpdump = Good for network troubleshooting, analysis, debugging.
+12. wget = used to download files from the internet
+13. iftop = view a list of network connections in real time and their transfer rates
+14. arp = Used to display and modify the Address resoulution protocol (APR) cache on a system. APR is a network protocol used to map an IP address to a physical (MAC) address on a local network.
+15. Traceroute = it traces network paths.
+16. netstat = Provides information about network connections, routing tables, interface statistics, and other network-related information on a computer.
+17. nslookup = query DNS servers to obtain domain name or IP address mapping, or other DNS records
+18. mtr = It combines "traceroute" and "ping" commands. It sends packets it you destination then it continuously updates the information.
+19. route = It is used to display or manipulate the routing table. The routing table is a set of rules that dictates how network traffic should be directed in a computer network.
+20. whois = It queries the WHOIS database. The WHOIS database contains information about registered domain names, IP address allocations and other registration details.
+21. IRC (internet relay chat): It is a protocol used for real-time text messaging or chat using the internet. It allows people to communicate through private chats or groups.
+
+Keywords/Abbreviations
+IP adress = Internet Protocol
+GUI = Graphic User Interface
+DNS = Domain Name System
+OS (Operating System): manages all the software and hardware on the computer.
+
+Git
+Git init = make repository
+Git add filename = adds file so you can commit later
+
+git commit = save progress
+git checkout -b “branch name” = make branch
+git checkout “branch name” = switch to branch
+git restore “file name” = revert to last commitment version
+git rm –cached “file name” = remove file from repository
+git push/pull origin main/master
+git reset --soft HEAD~x = remove x commits
+
+Bash Script
+echo "words" = read the words
+read = echo but more advanced and prompts user for a response
+Variables = variable name
+$variable name = use variable
+Control structures
+if, else, while, elif, loop
+fi = used to end an if statement
+done = used to close a while loop
+$RANDOM = generate a random number using %
+case = used to branch stuff
+ecas = used to end case statement
+-gt, -lt, -ne, -eq -le, -ge comparisons bash
+&& and || or 
+
+
+
+Data and File Types
+Array = place to store variables.
+1=Integer=int
+2.3=Float
+XML file = Extensible Markup Language File- This type of file is readable by both humans and computers.
+
+Regex
+
+Security Data
+Need To Know
+Meta data = data about data "eg you write in a text document. Then you save it. Where ever you saved it will have when you saved it when you last edited it."
+Unclassified = not importatnt no need to protect
+Protected A = simple stuff that isn't publically known but you could find out if you searched for it "personal information but not too important".
+Protected B = medical data more personal
+Protected C = could be damaging to you 
+Secret = Extremely dangerous information
+Top Secret = secret except more detail
+eyes/ultra = super extremely important will probably never see anything like it 
+
+Relationships
+System defines Permissions, File System, Users accounts
+	Users accounts (Belongs To) User Types(Root, Regular, Daemons, Guest)
+		User Types (Have) Permissions
+			Permissions (Governs) File System
+		User Types (Accesses) File System
+			File System (Affects) System
+
+Privacy and Security
+1. Government: A group of people that implements rules to run a organization
+2. Society/ies: Groups of people co-existing in a semi-organized community 
+3. Communities: A collection of people that work together towards a common goal
+4. Legislation: A set of laws that everyone is excpected to follow
+5. Law vs by-Law: Laws are enforced by the govournment and cover general broad rules, while by-laws are more focused onlocal matters
+6. Legal and Illegal: Legal actions are what the government allows us to do, while Illegal actions are against the law
+7. Privacy: The sacrifice of safety for secrecy
+8. Information Security: The act of protecting peoples privacy and information
+9. Security: How safe your information or data is
+10. Operational Security (OpSec): How critical information that could be used against us is protected
+11. Crown Company/Organization: Owned by a greater power but operates on its own
+12. Public Conmpany: Owned by individuals where their stocks can be bought on the market
+13. Private Company: Owned by individuals but their stocks can not be bought/traded on the market
+14. Non-Profit Company: A company that doesn't work for any sort of profit of any kind.
+15. Not For Profit Company: Companies that target the welfare of humanity rather than money of profit
