@@ -51,11 +51,12 @@ find path -name "name of file"= search for files
 Rm = remove stuff
 find /path/to/search -(name/size) "name or part of name" +100M
 
-Computer Parts
-Applications:
-OS (Operating System): manages all the software and hardware on the computer.
+Operating System:
+Applications: Programs that people use on their devices.
+Libraries: Collections of pre-written code that help programs perform common tasks.
 File systems: A set of data structures, interfaces, abstractions, and APIs that work together to manage any type of file on any type of storage device, in a consistent manner.	
-Shell: The shell manages the interaction between you and the operating system by prompting you for input
+Shell: The shell manages the interaction between you and the operating system by prompting you for input.
+Drivers: Transfers information between hardware devices.
 Kernal: Acts as a bridge between applications and data processing performed at hardware level using inter-process communication and system calls.
 Firmware: Stored instructions on hardware that tells the hardware how to function.
 Hardware: Physical components: Motherboard, CPU(Central Processing Unit), GPU(Graphics Processing Unit/Graphics Card), SSD(Solid State Drive), RAM(Random Access Memory), Case, Cooler, Power supply, Peripherals.
