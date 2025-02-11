@@ -4,7 +4,8 @@ Grade 10 Cybersecurity
 INDEX
 Logic gates
 Basic Linux Commands
-Computer Parts
+Operating System Layers
+Operating Systems
 Networking
 Permissions/User types
 Useful Commands
@@ -16,190 +17,291 @@ Security Data
 Relationships
 
 
-LOGIC GATES\Boolean
-IS	NOT	AND	OR
-input	output
-0	false
-1	true
-
-A	B	AND	OR	XAND	NOR
-0	1	F	T	F	F
-1	0	F	T	F	F
-0	0	F	F	T	T
-1	1	T	T	T	F
-XAND (Exclusive AND) only if both are equal.
-NOR (Neither this nor that) only proves things that are false.
+Logic Gates:
+	IS	NOT	AND	OR
+	input	output
+	0	false
+	1	true
+	
+	A	B	AND	OR	XAND	NOR
+	0	1	F	T	F	F
+	1	0	F	T	F	F
+	0	0	F	F	T	T
+	1	1	T	T	T	F
+	XAND (Exclusive AND) only if both are equal.
+	NOR (Neither this nor that) only proves things that are false.
 
 
 Basic Linux Commands:
-
-henry@Henry:~$
-henry = user
-Henry = PC name
-~ = home/henry
-cd / = goes to root directory
-ls (-l)= list (permissions)
-cd = change directory
-cd- = go back
-pwd = prints current wording directory
-mkdir/rmdir = make/remove directory
-cat = view what’s in a file
-touch = creates empty documents
-nano file_name = allows you to edit a file
-mv = rename
-find path -name "name of file"= search for files
-Rm = remove stuff
-find /path/to/search -(name/size) "name or part of name" +100M
-
-Operating System:
-Applications: Programs that people use on their devices.
-Libraries: Collections of pre-written code that help programs perform common tasks.
-File systems: A set of data structures, interfaces, abstractions, and APIs that work together to manage any type of file on any type of storage device, in a consistent manner.	
-Shell: The shell manages the interaction between you and the operating system by prompting you for input.
-Drivers: Transfers information between hardware devices.
-Kernal: Acts as a bridge between applications and data processing performed at hardware level using inter-process communication and system calls.
-Firmware: Stored instructions on hardware that tells the hardware how to function.
-Hardware: Physical components: Motherboard, CPU(Central Processing Unit), GPU(Graphics Processing Unit/Graphics Card), SSD(Solid State Drive), RAM(Random Access Memory), Case, Cooler, Power supply, Peripherals.
+	nevada@Nevada:~$
+	nevada = user
+	Nevada = PC name
+	~ = home/nevada
+	cd / = goes to root directory
+	ls (-l)= list (permissions)
+	cd = change directory
+	cd- = go back
+	pwd = prints current wording directory
+	mkdir/rmdir = make/remove directory
+	cat = view what’s in a file
+	touch = creates empty documents
+	nano file_name = allows you to edit a file
+	mv = rename
+	find path -name "name of file"= search for files
+	Rm = remove stuff
+	find /path/to/search -(name/size) "name or part of name" +100M
 
 
-Networking terms
-1. IP Address (Internet protocol): A UID/personal number that is used to identify devices that are connected to the internet "eg 192.168.1.3".
-2. Subnet mask: It hosts portions in an IP address for routing and identification. A subnet mask is a 32-bit number that divides an IP address into network and host IPs. portions. It helps devices determine whether another device is on the same local network or a different one. Displayed in 2 octets of 0s and 1s
-3. Gateway: It connects network devices, helping them communicate easier.
-4. DNS (Domain Name System): (only 13 DNS servers in the world) "eg 255.255.255.0".
-5. Network switch: It is a device that connects local networks allowing them to communicate.
-6. Network Router: A network router is a device that connects networks and directs data traffic.
-7. Access point: is allows wifi enabled devices to connect to a wired network.
-8. MAC address: Identifier assigned to a network interface for communication.
-9. Port: Allows multiple devices to use networks without interference.
-10. System monitoring =  tracking the performance/health of system or network
-11. System Security = Protocols in place to protect systems, networks, and more from breaches/threats.
-12. System = a bunch of processes that work together to make things work
-13. Process = the way things are done
-14. Types of networks (Wan, LAN, PAN MAN and VPN)
-
-Permissions
-Octal Notation
-- r-xrw-rw-
-d	rwx	--x	r--
-	owner	group	other
-- at the start = file
-d at the start = directory
-ls -l = view permissions
-r = read = 4
-w = write = 2
-x = execute = 1
-types of people it affects
-User/owner = u
-Group = g
-ALL = o
-+ to add user to file
-- to remove permissions
-= to set exact permissions
-Chmod = Change file permissions
-chown username filename
-User types
-Root = permissions to everything
-regular users = created by root user
-system users = default users created by the system.
-
-Useful Commands
-1. Ifconfig (internet configuration) = It is used in Unix-like operating systems like Linux, to configure and display information about network interfaces on a system.
-2. ip (internet protocol) = it is the address of your device. You would use it to view information about network interfaces, like their name, states, and hardware addresses. It also replaced the ifconfig and route command.
-3. host = used to find the ip address of a specific domain name or find the domain name of an IP address.
-4. tracepath = traces network paths and is similar to traceroute.
-5. ss = used to display socket statistics. It replaced netstat.
-6. dig = retrieves information about various DNS.
-7. iwconfig = It configures wireless network interfaces on linux systems.
-8. hostname = It shows the name of the device you’re using.
-9. ping = it shows how well your computer is working.
-10. ifplugstatus = You need to download ifplugd to use the command. The command checks the link status of a network interface.
-11. tcpdump = Good for network troubleshooting, analysis, debugging.
-12. wget = used to download files from the internet
-13. iftop = view a list of network connections in real time and their transfer rates
-14. arp = Used to display and modify the Address resoulution protocol (APR) cache on a system. APR is a network protocol used to map an IP address to a physical (MAC) address on a local network.
-15. Traceroute = it traces network paths.
-16. netstat = Provides information about network connections, routing tables, interface statistics, and other network-related information on a computer.
-17. nslookup = query DNS servers to obtain domain name or IP address mapping, or other DNS records
-18. mtr = It combines "traceroute" and "ping" commands. It sends packets it you destination then it continuously updates the information.
-19. route = It is used to display or manipulate the routing table. The routing table is a set of rules that dictates how network traffic should be directed in a computer network.
-20. whois = It queries the WHOIS database. The WHOIS database contains information about registered domain names, IP address allocations and other registration details.
-21. IRC (internet relay chat): It is a protocol used for real-time text messaging or chat using the internet. It allows people to communicate through private chats or groups.
-
-Keywords/Abbreviations
-IP adress = Internet Protocol
-GUI = Graphic User Interface
-DNS = Domain Name System
-OS = Operating System; manages all the software and hardware on the computer.
-API = Application Programming Interface
-
-Git
-Git init = make repository
-Git add filename = adds file so you can commit later
-
-git commit = save progress
-git checkout -b “branch name” = make branch
-git checkout “branch name” = switch to branch
-git restore “file name” = revert to last commitment version
-git rm –cached “file name” = remove file from repository
-git push/pull origin main/master
-git reset --soft HEAD~x = remove x commits
-
-Bash Script
-echo "words" = read the words
-read = echo but more advanced and prompts user for a response
-Variables = variable name
-$variable name = use variable
-Control structures
-if, else, while, elif, loop
-fi = used to end an if statement
-done = used to close a while loop
-$RANDOM = generate a random number using %
-case = used to branch stuff
-ecas = used to end case statement
--gt, -lt, -ne, -eq -le, -ge comparisons bash
-&& and || or 
+Operating System Layers:
+	Applications: Programs that people use on their devices.
+	Libraries: Collections of pre-written code that help programs perform common tasks.
+	File systems: A set of data structures, interfaces, abstractions, and APIs that work together to manage any type of file on any type of storage device, in a consistent manner.	
+	Shell: The shell manages the interaction between you and the operating system by prompting you for input.
+	Drivers: Transfers information between hardware devices.
+	Kernal: Acts as a bridge between applications and data processing performed at hardware level using inter-process communication and system calls.
+	Firmware: Stored instructions on hardware that tells the hardware how to function.
+	Hardware: Physical components: Motherboard, CPU(Central Processing Unit), GPU(Graphics Processing Unit/Graphics Card), SSD(Solid State Drive), RAM(Random Access Memory), Case, Cooler, Power supply, Peripherals.
 
 
+Operating Systems:
+	Windows: (The user-friendly popular OS)
+		Graphical User Interface (GUI): Windows is known for its user-friendly interface, which includes elements like the Start menu, taskbar, windows, and icons.
+		Multi-tasking: It allows users to run multiple applications at the same time, switching between them seamlessly.
+		File Management: Windows provides tools like File Explorer to manage files, folders, and drives.
+		Software Compatibility: It supports a vast range of software applications, from games to productivity tools.
+		Security Features: Windows includes built-in security features such as Windows Defender (antivirus), firewalls, and user access control.
+		Regular Updates: Microsoft regularly releases updates for security, new features, and bug fixes through Windows Update.
+		Popularity: Very widely used operating system.
 
-Data and File Types
-Array = place to store variables.
-1=Integer=int
-2.3=Float
-XML file = Extensible Markup Language File - This type of file is readable by both humans and computers.
+	Mac OS: (The apple operating system... used for business people ig?)
+	Graphical User Interface (GUI): macOS features a sleek and intuitive user interface with elements like the Dock (for quick app access), Menu Bar (provides system controls and app menus), and Finder (file management tool).
+	Multi-tasking: macOS allows for easy multitasking, enabling users to switch between apps using Mission Control or manage multiple desktops with Spaces. Split View lets you work in two apps side by side, enhancing productivity.
+	File Management: The Finder tool in macOS is used for file and folder management, allowing users to organize files easily. It supports a clean, hierarchical file structure with features like Tags for organization and iCloud Drive cloud storage and access across devices.
+	Software Compatibility: macOS supports a wide range of professional applications, especially for creative tasks (e.g., Final Cut Pro, Adobe Photoshop, Logic Pro). Apps are often optimized for macOS for better performance and integration. Many games are not supported on Mac OS, so a lot of "gamers" may prefer Linux or Windows.
+	Security Features: Protects against untrusted apps by only allowing apps from trusted sources or the App Store, full-disk encryption to protect user data, built-in malware protection, and ensures critical system files remain untouchable by unauthorized software. macOS is designed with privacy in mind, offering features like app tracking transparency and limiting data collection.
+	Regular Updates: Apple releases free, regular updates for macOS, which include new features, security patches, and bug fixes. Updates are generally pushed through Software Update, making it easy for users to stay up-to-date and secure.
 
-Security Data
-Need To Know
-Meta data = data about data "eg you write in a text document. Then you save it. Where ever you saved it will have when you saved it when you last edited it."
-Unclassified = not importatnt no need to protect
-Protected A = simple stuff that isn't publically known but you could find out if you searched for it "personal information but not too important".
-Protected B = medical data more personal
-Protected C = could be damaging to you 
-Secret = Extremely dangerous information
-Top Secret = secret except more detail
-eyes/ultra = super extremely important will probably never see anything like it 
+	Chrome OS: (For Chromebooks)
+		(put stuff here)
 
-Relationships
-System defines Permissions, File System, Users accounts
-	Users accounts (Belongs To) User Types(Root, Regular, Daemons, Guest)
-		User Types (Have) Permissions
-			Permissions (Governs) File System
-		User Types (Accesses) File System
-			File System (Affects) System
+	Linux: (The cool people OS)
+		Unlike other OS, Linux is freely available for anyone to use, modify, or distribute.
+		Open-source: Linux is released under the GNU General Public License (GPL), meaning anyone can access the source code, modify it, and distribute it. This fosters a large community of developers and contributors.
+		Kernel: The heart of any Linux-based system is the Linux kernel, which interacts directly with hardware and manages system resources like memory, processes, and devices.
+		Distributions (Distros): Since Linux is open-source, many different "distributions" (or "distros") are available. These distros package the Linux kernel with different software, desktop environments, and utilities. Examples of popular Linux distributions include Ubuntu, Debian, Fedora, CentOS, Arch Linux, and Mint.
+		Multitasking & Multi-user: Linux is designed to handle multiple tasks and users at the same time, making it a great option for servers and high-performance computing.
+		Security: Linux is generally considered more secure than other operating systems due to its strong user permissions and security models. It's also less commonly targeted by malware and viruses.
+		Command Line Interface (CLI) and GUI: While Linux has powerful command-line tools for advanced users, many distributions also offer user-friendly graphical user interfaces (GUIs) for easier use.
+		Stability & Reliability: Linux is known for being extremely stable and reliable, which is why it's widely used in server environments, embedded systems, and critical infrastructure.
+		Software Compatibility: While Linux doesn't run Windows software natively, it has a vast library of open-source software available. Additionally, tools like Wine or virtual machines can help run Windows applications on Linux.
+		Customization: One of the biggest advantages of Linux is its flexibility and customizability. Users can modify nearly every aspect of the operating system, from the desktop environment to the kernel itself.
+		
+		Common Distributions:
+			Ubuntu:
+				Target Audience: Beginners, general users, and developers.
+				Package Management: Uses APT (Advanced Package Tool) and DEB packages.
+				Desktop Environment: GNOME by default, but it can be customized or swapped out for others (e.g., KDE, Xfce).
+				Key Features:
+					User-friendly: Ubuntu is often recommended for new Linux users due to its ease of use, large community, and extensive documentation.
+					Regular Releases: Ubuntu has regular releases every six months, with Long-Term Support (LTS) versions supported for 5 years.
+					Large Software Repositories: Ubuntu provides access to a vast array of software, often packaged and ready to install.
+					Ubuntu Software Center: A user-friendly interface for installing software.
+					Wide Hardware Support: Great out-of-the-box hardware compatibility, especially for desktops and laptops.
+				Common Use: Personal computing, developers, servers, cloud computing.
+	
+			Fedora:
+				Target Audience: Developers, enthusiasts, and users who want the latest software.
+				Package Management: Uses DNF (Dandified Yum) and RPM packages.
+				Desktop Environment: GNOME by default, but can also support KDE Plasma, Xfce, and others.
+				Key Features:
+					Cutting-edge Software: Fedora is known for including the latest open-source technologies and software, making it a great choice for developers who want to be on the bleeding edge.
+					Innovation: Fedora often serves as a testing ground for new features that eventually make their way into Red Hat Enterprise Linux (RHEL).
+					Strong Community and Red Hat Support: Fedora is sponsored by Red Hat, and many enterprises use Fedora as a base for RHEL.
+					Free and Open-Source: Fedora focuses exclusively on open-source software and doesn’t include proprietary codecs or software by default.
+				Common Use: Developers, enthusiasts, cutting-edge users, testing new technologies.
+	
+			Debian:
+				Target Audience: Experienced users who prioritize stability.
+				Package Management: Uses APT and DEB packages, just like Ubuntu (since Ubuntu is derived from Debian).
+				Desktop Environment: GNOME by default, but can be customized with various desktop environments like KDE, Xfce, or LXQt.
+				Key Features:
+					Stability: Debian is known for its stability and reliability, which makes it a popular choice for server environments.
+					Conservative Updates: Debian releases tend to be less frequent, but they focus on thoroughly tested software to ensure reliability.
+					Non-commercial: It is developed by a community of volunteers, and it doesn’t have corporate backing like Ubuntu does (although Ubuntu is based on Debian).
+					Security: Debian provides strong security, with regular updates and patches.
+				Common Use: Servers, workstations, and anyone seeking a rock-solid, stable system.
+	
+			Arch Linux:
+				Target Audience: Advanced users and enthusiasts who prefer minimalism and control.
+				Package Management: Uses the pacman package manager and has access to the Arch User Repository (AUR), which contains a huge selection of user-contributed packages.
+				Desktop Environment: No default environment. Users can choose any environment (GNOME, KDE, Xfce, etc.), or even run a minimalist setup.
+				Key Features:
+					Minimalistic: Arch Linux provides a very minimal installation, allowing users to install only the components they need and configure the system from the ground up.
+					Rolling Release: Arch follows a rolling release model, meaning you get the latest software updates continuously, without needing to reinstall or upgrade to a new version.
+					Customization: Arch is highly customizable, which appeals to advanced users who want full control over their system.
+					Arch Wiki: Arch has a vast and comprehensive wiki that provides detailed guides and documentation for configuring the system.
+				Common Use: Experienced users, enthusiasts, and anyone who wants complete control over their system and software.
+	
+			Mint:
+				Target Audience: Beginners or users who prefer a traditional desktop environment.
+				Package Management: Uses APT and DEB packages (based on Ubuntu).
+				Desktop Environment: Cinnamon (its own, user-friendly environment), but also offers MATE and Xfce versions.
+				Key Features:
+					User-friendly: Linux Mint is known for being very easy to use, especially for those coming from Windows. Its Cinnamon desktop environment is designed to be familiar to Windows users.
+					Out-of-the-box Experience: Mint comes with many codecs, plugins, and other essential software pre-installed, so users don’t have to worry about installing everything manually.
+					Stable and Reliable: Mint is based on Ubuntu and Debian, offering both stability and access to a wide range of software.
+					Lightweight Options: The MATE and Xfce editions are particularly lightweight and suitable for older hardware.
+				Common Use: Desktop users, particularly those who prefer a smooth transition from Windows.
 
-Privacy and Security
-1. Government: A group of people that implements rules to run a organization
-2. Society/ies: Groups of people co-existing in a semi-organized community 
-3. Communities: A collection of people that work together towards a common goal
-4. Legislation: A set of laws that everyone is excpected to follow
-5. Law vs by-Law: Laws are enforced by the government and cover general broad rules, while by-laws are more focused onlocal matters
-6. Legal and Illegal: Legal actions are what the government allows us to do, while Illegal actions are against the law
-7. Privacy: The sacrifice of safety for secrecy
-8. Information Security: The act of protecting peoples privacy and information
-9. Security: How safe your information or data is
-10. Operational Security (OpSec): How critical information that could be used against us is protected
-11. Crown Company/Organization: Owned by a greater power but operates on its own
-12. Public Conmpany: Owned by individuals where their stocks can be bought on the market
-13. Private Company: Owned by individuals but their stocks can not be bought/traded on the market
-14. Non-Profit Company: A company that doesn't work for any sort of profit of any kind.
-15. Not For Profit Company: Companies that target the welfare of humanity rather than money of profit
+			Main Differences in Distributions:
+				Ubuntu: User-friendly, great for beginners, regular updates, and strong community support.
+				Debian: Extremely stable, great for servers and experienced users, less frequent releases.
+				Fedora: Cutting-edge software, developer-oriented, great for testing new technologies.
+				Arch Linux: Minimalist, rolling release, fully customizable, for experienced users.
+				Linux Mint: Beginner-friendly, Windows-like interface, highly stable and pre-configured.
+
+
+Networking terms:
+	1. IP Address (Internet protocol): A UID/personal number that is used to identify devices that are connected to the internet "eg 192.168.1.3".
+	2. Subnet mask: It hosts portions in an IP address for routing and identification. A subnet mask is a 32-bit number that divides an IP address into network and host IPs. portions. It helps devices determine whether another device is on the same local network or a different one. Displayed in 2 octets of 0s and 1s
+	3. Gateway: It connects network devices, helping them communicate easier.
+	4. DNS (Domain Name System): (only 13 DNS servers in the world) "eg 255.255.255.0".
+	5. Network switch: It is a device that connects local networks allowing them to communicate.
+	6. Network Router: A network router is a device that connects networks and directs data traffic.
+	7. Access point: is allows wifi enabled devices to connect to a wired network.
+	8. MAC address: Identifier assigned to a network interface for communication.
+	9. Port: Allows multiple devices to use networks without interference.
+	10. System monitoring =  tracking the performance/health of system or network
+	11. System Security = Protocols in place to protect systems, networks, and more from breaches/threats.
+	12. System = a bunch of processes that work together to make things work
+	13. Process = the way things are done
+	14. Types of networks (Wan, LAN, PAN MAN and VPN)
+
+
+Permissions:
+	Octal Notation:
+	-r-xrw-rw-
+	drwx--xr--
+	d	rwx		--x		r--
+		owner	group	other
+	- at the start = file
+	d at the start = directory
+	ls -l = view permissions
+	r = read = 4
+	w = write = 2
+	x = execute = 1
+	types of people it affects
+	User/owner = u
+	Group = g
+	ALL = o
+	+ to add user to file
+	- to remove permissions
+	= to set exact permissions
+	Chmod = Change file permissions
+	chown username filename
+	User types
+	Root = permissions to everything
+	regular users = created by root user
+	system users = default users created by the system.
+
+
+Useful Commands:
+	1. Ifconfig (internet configuration) = It is used in Unix-like operating systems like Linux, to configure and display information about network interfaces on a system.
+	2. ip (internet protocol) = it is the address of your device. You would use it to view information about network interfaces, like their name, states, and hardware addresses. It also replaced the ifconfig and route command.
+	3. host = used to find the ip address of a specific domain name or find the domain name of an IP address.
+	4. tracepath = traces network paths and is similar to traceroute.
+	5. ss = used to display socket statistics. It replaced netstat.
+	6. dig = retrieves information about various DNS.
+	7. iwconfig = It configures wireless network interfaces on linux systems.
+	8. hostname = It shows the name of the device you’re using.
+	9. ping = it shows how well your computer is working.
+	10. ifplugstatus = You need to download ifplugd to use the command. The command checks the link status of a network interface.
+	11. tcpdump = Good for network troubleshooting, analysis, debugging.
+	12. wget = used to download files from the internet
+	13. iftop = view a list of network connections in real time and their transfer rates
+	14. arp = Used to display and modify the Address resoulution protocol (APR) cache on a system. APR is a network protocol used to map an IP address to a physical (MAC) address on a local network.
+	15. Traceroute = it traces network paths.
+	16. netstat = Provides information about network connections, routing tables, interface statistics, and other network-related information on a computer.
+	17. nslookup = query DNS servers to obtain domain name or IP address mapping, or other DNS records
+	18. mtr = It combines "traceroute" and "ping" commands. It sends packets it you destination then it continuously updates the information.
+	19. route = It is used to display or manipulate the routing table. The routing table is a set of rules that dictates how network traffic should be directed in a computer network.
+	20. whois = It queries the WHOIS database. The WHOIS database contains information about registered domain names, IP address allocations and other registration details.
+	21. IRC (internet relay chat): It is a protocol used for real-time text messaging or chat using the internet. It allows people to communicate through private chats or groups.
+
+
+Keywords/Abbreviations:
+	IP adress = Internet Protocol
+	GUI = Graphic User Interface
+	DNS = Domain Name System
+	OS = Operating System; manages all the software and hardware on the computer.
+	API = Application Programming Interface
+
+Git:
+	Git init = make repository
+	Git add filename = adds file so you can commit later
+
+	git commit = save progress
+	git checkout -b “branch name” = make branch
+	git checkout “branch name” = switch to branch
+	git restore “file name” = revert to last commitment version
+	git rm –cached “file name” = remove file from repository
+	git push/pull origin main/master
+	git reset --soft HEAD~x = remove x commits
+
+Bash Script:
+	echo "words" = read the words
+	read = echo but more advanced and prompts user for a response
+	Variables = variable name
+	$variable name = use variable
+	Control structures
+	if, else, while, elif, loop
+	fi = used to end an if statement
+	done = used to close a while loop
+	$RANDOM = generate a random number using %
+	case = used to branch stuff
+	ecas = used to end case statement
+	-gt, -lt, -ne, -eq -le, -ge comparisons bash
+	&& and || or 
+
+
+
+Data and File Types:
+	Array = place to store variables.
+	1=Integer=int
+	2.3=Float
+	XML file = Extensible Markup Language File - This type of file is readable by both humans and computers.
+
+Security Data:
+	Meta data = data about data "eg you write in a text document. Then you save it. Where ever you saved it will have when you saved it when you last edited it."
+	Unclassified = not importatnt no need to protect
+	Protected A = simple stuff that isn't publically known but you could find out if you searched for it "personal information but not too important".
+	Protected B = medical data more personal
+	Protected C = could be damaging to you 
+	Secret = Extremely dangerous information
+	Top Secret = secret except more detail
+	eyes/ultra = super extremely important will probably never see anything like it 
+
+Relationships:
+	System defines Permissions, File System, Users accounts
+		Users accounts (Belongs To) User Types(Root, Regular, Daemons, Guest)
+			User Types (Have) Permissions
+				Permissions (Governs) File System
+			User Types (Accesses) File System
+				File System (Affects) System
+
+Privacy and Security:
+	1. Government: A group of people that implements rules to run a organization
+	2. Society/ies: Groups of people co-existing in a semi-organized community 
+	3. Communities: A collection of people that work together towards a common goal
+	4. Legislation: A set of laws that everyone is excpected to follow
+	5. Law vs by-Law: Laws are enforced by the government and cover general broad rules, while by-laws are more focused onlocal matters
+	6. Legal and Illegal: Legal actions are what the government allows us to do, while Illegal actions are against the law
+	7. Privacy: The sacrifice of safety for secrecy
+	8. Information Security: The act of protecting peoples privacy and information
+	9. Security: How safe your information or data is
+	10. Operational Security (OpSec): How critical information that could be used against us is protected
+	11. Crown Company/Organization: Owned by a greater power but operates on its own
+	12. Public Conmpany: Owned by individuals where their stocks can be bought on the market
+	13. Private Company: Owned by individuals but their stocks can not be bought/traded on the market
+	14. Non-Profit Company: A company that doesn't work for any sort of profit of any kind.
+	15. Not For Profit Company: Companies that target the welfare of humanity rather than money of profit
