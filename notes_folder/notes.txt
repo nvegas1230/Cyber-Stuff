@@ -81,11 +81,15 @@ Operating Systems:
 		Security Features: Protects against untrusted apps by only allowing apps from trusted sources or the App Store, full-disk encryption to protect user data, built-in malware protection, and ensures critical system files remain untouchable by unauthorized software. macOS is designed with privacy in mind, offering features like app tracking transparency and limiting data collection.
 		Regular Updates: Apple releases free, regular updates for macOS, which include new features, security patches, and bug fixes. Updates are generally pushed through Software Update, making it easy for users to stay up-to-date and secure.
 
-	Chrome OS: (For Chromebooks)
-		(put stuff here)
 
 	Linux: (The cool people OS)
-		Unlike other OS, Linux is freely available for anyone to use, modify, or distribute.
+		It is more customizable than Windows, meaning:
+			Unlike other OS, Linux is freely available for anyone to use, modify, or distribute.
+			You can edit any aspects of the OS from the kernel up.
+			You can make any changes that you do not like to the security of the OS, or you can change the interface to something that only you know how to navigate/operate.
+			You can "theme" your OS, making the desktop environment look completely different in color, shape, and functionality.
+			You can even customize the shell of your OS, meaning that you will use a different system than BASH to talk directly to the shell.
+		Flavors: Flavors are altered distributions that share the same core packages as the original, share the same repositories, but have different packages added to the default installation. Flavors are meant to meet the needs of a specific group of people or section of people.
 		Open-source: Linux is released under the GNU General Public License (GPL), meaning anyone can access the source code, modify it, and distribute it. This fosters a large community of developers and contributors.
 		Kernel: The heart of any Linux-based system is the Linux kernel, which interacts directly with hardware and manages system resources like memory, processes, and devices.
 		Distributions (Distros): Since Linux is open-source, many different "distributions" (or "distros") are available. These distros package the Linux kernel with different software, desktop environments, and utilities. Examples of popular Linux distributions include Ubuntu, Debian, Fedora, CentOS, Arch Linux, and Mint.
