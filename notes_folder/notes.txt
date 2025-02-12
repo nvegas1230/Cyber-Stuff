@@ -74,12 +74,12 @@ Operating Systems:
 		Popularity: Very widely used operating system.
 
 	Mac OS: (The apple operating system... used for business people ig?)
-	Graphical User Interface (GUI): macOS features a sleek and intuitive user interface with elements like the Dock (for quick app access), Menu Bar (provides system controls and app menus), and Finder (file management tool).
-	Multi-tasking: macOS allows for easy multitasking, enabling users to switch between apps using Mission Control or manage multiple desktops with Spaces. Split View lets you work in two apps side by side, enhancing productivity.
-	File Management: The Finder tool in macOS is used for file and folder management, allowing users to organize files easily. It supports a clean, hierarchical file structure with features like Tags for organization and iCloud Drive cloud storage and access across devices.
-	Software Compatibility: macOS supports a wide range of professional applications, especially for creative tasks (e.g., Final Cut Pro, Adobe Photoshop, Logic Pro). Apps are often optimized for macOS for better performance and integration. Many games are not supported on Mac OS, so a lot of "gamers" may prefer Linux or Windows.
-	Security Features: Protects against untrusted apps by only allowing apps from trusted sources or the App Store, full-disk encryption to protect user data, built-in malware protection, and ensures critical system files remain untouchable by unauthorized software. macOS is designed with privacy in mind, offering features like app tracking transparency and limiting data collection.
-	Regular Updates: Apple releases free, regular updates for macOS, which include new features, security patches, and bug fixes. Updates are generally pushed through Software Update, making it easy for users to stay up-to-date and secure.
+		Graphical User Interface (GUI): macOS features a sleek and intuitive user interface with elements like the Dock (for quick app access), Menu Bar (provides system controls and app menus), and Finder (file management tool).
+		Multi-tasking: macOS allows for easy multitasking, enabling users to switch between apps using Mission Control or manage multiple desktops with Spaces. Split View lets you work in two apps side by side, enhancing productivity.
+		File Management: The Finder tool in macOS is used for file and folder management, allowing users to organize files easily. It supports a clean, hierarchical file structure with features like Tags for organization and iCloud Drive cloud storage and access across devices.
+		Software Compatibility: macOS supports a wide range of professional applications, especially for creative tasks (e.g., Final Cut Pro, Adobe Photoshop, Logic Pro). Apps are often optimized for macOS for better performance and integration. Many games are not supported on Mac OS, so a lot of "gamers" may prefer Linux or Windows.
+		Security Features: Protects against untrusted apps by only allowing apps from trusted sources or the App Store, full-disk encryption to protect user data, built-in malware protection, and ensures critical system files remain untouchable by unauthorized software. macOS is designed with privacy in mind, offering features like app tracking transparency and limiting data collection.
+		Regular Updates: Apple releases free, regular updates for macOS, which include new features, security patches, and bug fixes. Updates are generally pushed through Software Update, making it easy for users to stay up-to-date and secure.
 
 	Chrome OS: (For Chromebooks)
 		(put stuff here)
